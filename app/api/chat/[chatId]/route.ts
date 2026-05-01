@@ -11,7 +11,7 @@ const openrouter = createOpenAI({
     apiKey: process.env.OPENROUTER_AI_KEY,
 });
 
-export async function POST(req: Request, { params }: { params: { chatId: string } }) {
+export async function POST(req: Request, { params }: { params: Promise<{ chatId: string }> }) {
     try {
         const { chatId } = await params;
         const { prompt } = await req.json();

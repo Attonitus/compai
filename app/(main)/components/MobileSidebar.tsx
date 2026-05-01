@@ -3,8 +3,12 @@ import { Menu } from "lucide-react";
 import Sidebar from "./Sidebar";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
+interface Props {
+    isPro: boolean;
+}
 
-export default function MobileSidebar() {
+export default function MobileSidebar({isPro}: Props) {
+
     return (
         <Sheet>
             <SheetTrigger className="md:hidden pr-4">
@@ -19,7 +23,7 @@ export default function MobileSidebar() {
                 <h2 className="text-center text-xl font-bold">
                     CompAI
                 </h2>
-                <Sidebar />
+                <Sidebar isPro={isPro} />
             </SheetContent>
         </Sheet>
     )

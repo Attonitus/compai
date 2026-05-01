@@ -4,7 +4,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 
-export async function PATCH(req: Request, { params }: { params: { companionId: string } }) {
+export async function PATCH(req: Request, { params }: { params: Promise<{ companionId: string }> }) {
     try {
         const { companionId } = await params;
         const body = await req.json();
@@ -58,7 +58,7 @@ export async function PATCH(req: Request, { params }: { params: { companionId: s
 }
 
 
-export async function DELETE(req: Request, { params }: { params: { companionId: string } }) {
+export async function DELETE(req: Request, { params }: { params: Promise<{ companionId: string }> }) {
     try {
         const { userId } = await auth();
         const { companionId } = await params;

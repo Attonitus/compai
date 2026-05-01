@@ -25,7 +25,7 @@ export default function Navbar({ isPro }: Props) {
     return (
         <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary h-16">
             <div>
-                <MobileSidebar />
+                <MobileSidebar isPro={isPro} />
                 <Link href={"/"} className="hidden md:block">
                     <h1 className={cn("text-xl md:text-3xl font-bold text-primary",
                         font.className
