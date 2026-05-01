@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
-import { Category, Companion } from "@/app/generated/prisma/browser"
 import * as z from "zod"
 import { toast } from "sonner"
 import { Separator } from "@/components/ui/separator";
@@ -16,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Wand2 } from "lucide-react";
 import { getPresignedUrl } from "@/app/actions/upload-action";
 import { useRouter } from "next/navigation";
+import { Category, Companion } from "@prisma/client";
 
 
 interface Props {

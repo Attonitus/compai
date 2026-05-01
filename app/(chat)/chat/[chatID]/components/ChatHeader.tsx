@@ -1,4 +1,3 @@
-import { Companion, Message } from "@/app/generated/prisma/client";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import BotAvatar from "./BotAvatar";
@@ -6,6 +5,7 @@ import { ChevronLeftIcon, Edit, MessagesSquare, MoreVertical, Trash } from "luci
 import { useUser } from "@clerk/nextjs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { toast } from "sonner";
+import { Companion, Message } from "@prisma/client";
 
 
 interface Props {

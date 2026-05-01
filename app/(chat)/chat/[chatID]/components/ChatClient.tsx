@@ -1,11 +1,11 @@
 "use client";
 
-import { Companion, Message } from "@/app/generated/prisma/client"
 import ChatHeader from "./ChatHeader";
 import { useState } from "react";
 import ChatForm from './ChatForm';
 import ChatMessages from './ChatMessages';
 import { ChatMessageProps } from './ChatMessage';
+import { Companion, Message } from "@prisma/client";
 
 interface Props {
     companion: Companion & {

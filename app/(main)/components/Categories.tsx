@@ -1,8 +1,8 @@
 "use client"
 
-import { Category } from "@/app/generated/prisma/client"
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Category } from "@prisma/client";
 import { useRouter, useSearchParams } from "next/navigation";
 import qs from "query-string";
 

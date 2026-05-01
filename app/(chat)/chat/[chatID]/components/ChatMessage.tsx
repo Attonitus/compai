@@ -8,7 +8,6 @@ import { BeatLoader } from "react-spinners";
 import UserAvatar from "./UserAvatar";
 import { Button } from "@/components/ui/button";
 import { Copy } from "lucide-react";
-import { useState } from "react";
 import FormattedMessage from "./FormattedMessage";
 
 export interface ChatMessageProps {
